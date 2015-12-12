@@ -23,11 +23,11 @@ scope = ['https://spreadsheets.google.com/feeds']
 credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'].encode(), scope)
 gc = gspread.authorize(credentials)
 
-# Scheduler_xls should be already created, see format explanation below
+# Scheduler_xls should be already created, see format explanation in README.md
 sh = gc.open("Scheduler_xls")
 worksheet = sh.get_worksheet(0)
 
-# If you use non-ascii (cyrillic) characters for email/jabber notifications - use forced unicode encoding due to prevent issues
+# If you use non-ascii (cyrillic) characters for email/jabber notifications - use forced unicode encoding to prevent issues
 what_txt    = u'What should be done: '
 when_txt    = u'Event timestamp: '
 tz_txt      = u' GMT'
