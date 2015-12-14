@@ -1,6 +1,6 @@
 # googleapps
 Various scripts with Google Apps integration
-
+<br />
 gapps_scheduler.py - python app which interact with Google Form (based on Scheduler_xls document), 
 reads entries from xls and notify user before 10 min of scheduled event via email and jabber.
 <br /> 
